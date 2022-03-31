@@ -15,6 +15,8 @@ import java.util.Optional;
 public class ArtistServiceImpl implements ArtistService{
     private final ArtistRepository artistRepository;
 
+    
+    // 작가 찾기
     @Override
     @Transactional
     public ArtistDTO findById(Long id){
@@ -27,6 +29,7 @@ public class ArtistServiceImpl implements ArtistService{
     }
 
 
+    // 작가 생성
     @Override
     @Transactional
     public ArtistDTO create(ArtistDTO artistDTO){
@@ -34,10 +37,13 @@ public class ArtistServiceImpl implements ArtistService{
         return entityToDTO(created);
     }
 
+    
+    // 작가 삭제
     public void delete(Long id){
         artistRepository.deleteById(id);
     }
 
+    // 작가 수정
     @Override
     @Transactional
     public ArtistDTO update(Long id, ArtistDTO artistDTO){

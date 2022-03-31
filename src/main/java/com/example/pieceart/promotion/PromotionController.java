@@ -65,6 +65,7 @@ public class PromotionController {
         return ResponseEntity.noContent().build();
     }
 
+    // 수정은 이벤트 타이틀, 이벤트 설명만 가능, 외래키 수정 불가능
     // 프로모션 수정
     @PutMapping("/{id}")
     public ResponseEntity<Map<String, Object>> updatePromotion(@PathVariable("id") Long id, @Valid @RequestBody PromotionDTO updated){

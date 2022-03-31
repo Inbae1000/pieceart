@@ -117,6 +117,7 @@ public class WorksController {
         return ResponseEntity.noContent().build();
     }
 
+    // 수정은 이름, 카테고리, 출품년도, 설명만 수정 가능, 외래키는 수정 불가능 잘못 넣으면 지웠다가 새로 해야함
     // 작품 수정
     @PutMapping("/{id}")
     public ResponseEntity<Map<String, Object>> updateWorks(@PathVariable("id") Long id, @Valid @RequestBody WorksDTO updated){

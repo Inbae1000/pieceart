@@ -20,4 +20,5 @@ public interface WorksRepository extends JpaRepository<Works, Long> {
     @Query("Select a from Works a where a.name like %:name% order by a.name desc")
     List<Works>findByWorks(@Param("name")String name);
 
+
 }

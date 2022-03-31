@@ -23,7 +23,7 @@ public class Promotion {
     @Column(length=4000)
     private String eventDescription;
 
-    @OneToOne
+    @OneToOne()
     @JoinColumn(name="works_id")
     private Works works;
 

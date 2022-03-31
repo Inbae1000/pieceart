@@ -4,6 +4,7 @@ import com.example.pieceart.entity.Image;
 import com.example.pieceart.entity.Notice;
 import com.example.pieceart.entity.Works;
 import com.example.pieceart.notice.NoticeDTO;
+import com.example.pieceart.promotion.PromotionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.coyote.Request;
@@ -23,6 +24,7 @@ import java.util.Optional;
 public class WorksServiceImpl implements WorksService {
 
     private final WorksRepository worksRepository;
+    private final PromotionRepository promotionRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -92,6 +94,8 @@ public class WorksServiceImpl implements WorksService {
     }
 
 
+    @Transactional
+    @Override
     public void delete(Long id){
         worksRepository.deleteById(id);
     }

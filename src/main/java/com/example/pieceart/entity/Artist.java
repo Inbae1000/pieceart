@@ -35,7 +35,7 @@ public class Artist {
     private String description;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "artist")
+    @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL)
     private List<Works> works =new ArrayList<>();
 
     public void setAchieve(String achieve) {this.achieve = achieve;}
