@@ -26,11 +26,7 @@ public class Image {
 
     @NotNull
     @Column
-    private String fileName;
-
-    @NotNull
-    @Column
-    private String serverImageUrl;
+    private String imageName;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)

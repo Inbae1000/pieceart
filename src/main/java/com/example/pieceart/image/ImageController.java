@@ -1,6 +1,7 @@
 package com.example.pieceart.image;
 
 
+import com.example.pieceart.promotion.PromotionDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,19 +25,19 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Log4j2
 @RestController
 public class ImageController {
 
+    private ImageService imageService;
+
     @Value("C:\\upload")
     private String uploadPath;
 
     @PostMapping("/uploadAjax")
-    public ResponseEntity<List<ImageDTO>> uploadFile(MultipartFile[] uploadFiles){
+    public ResponseEntity<List<ImageDTO>> uploadFile(MultipartFile[] uploadFiles, ImageDTO imageDTO){
         List<ImageDTO> imageDTOList = new ArrayList<>();
 
         for(MultipartFile uploadFile : uploadFiles){
