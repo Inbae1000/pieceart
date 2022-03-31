@@ -26,7 +26,7 @@ public class Image {
 
     @NotNull
     @Column
-    private String imageUrl;
+    private String fileName;
 
     @NotNull
     @Column
