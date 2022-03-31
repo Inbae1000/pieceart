@@ -23,6 +23,7 @@ public class WorksDTO {
     private LocalDate auctionStartDate;
     private LocalDate auctionEndDate;
     private Integer initialPrice;
+    private Long artistId;
     private Artist artist;
     private Set<Image> images;
     private String size;

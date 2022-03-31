@@ -12,11 +12,12 @@ public interface PromotionService {
     PromotionDTO update(Long id, PromotionDTO promotionDTO);
 
     default Promotion dtoToEntity(PromotionDTO dto){
+    Works works = Works.builder().id(dto.getWorksId()).build();
 
         Promotion promotion = Promotion.builder()
                 .eventTitle(dto.getEventTitle())
                 .eventDescription(dto.getEventDescription())
-                .works(dto.getWorks())
+                .works(works)
                 .build();
         return promotion;
     }

@@ -26,12 +26,12 @@ public class PromotionServiceImpl implements PromotionService {
         }
         return null;
     }
+
     @Override
     @Transactional
     public PromotionDTO create(PromotionDTO promotionDTO){
         Promotion created  = promotionRepository.save(dtoToEntity(promotionDTO));
         return entityToDTO(created);
-
     }
 
 

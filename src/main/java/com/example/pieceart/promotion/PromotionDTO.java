@@ -12,6 +12,7 @@ public class PromotionDTO {
     private Long id;
     private String eventTitle;
     private String eventDescription;
+    private Long worksId;
     private Works works;
 
 

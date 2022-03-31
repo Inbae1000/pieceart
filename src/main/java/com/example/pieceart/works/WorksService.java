@@ -19,7 +19,7 @@ public interface WorksService {
     WorksDTO update(Long id, WorksDTO worksDTO);
 
     default Works dtoToEntity(WorksDTO dto){
-
+    Artist artist = Artist.builder().id(dto.getArtistId()).build();
 
         Works works = Works.builder()
                 .name((dto.getName()))
@@ -29,7 +29,7 @@ public interface WorksService {
                 .auctionStartDate(dto.getAuctionStartDate())
                 .auctionEndDate(dto.getAuctionEndDate())
                 .initialPrice(dto.getInitialPrice())
-                .artist(dto.getArtist())
+                .artist(artist)
                 .images(dto.getImages())
                 .build();
         return works;
