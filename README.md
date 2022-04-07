@@ -7,6 +7,17 @@
 # DB설계
 ![db1](https://user-images.githubusercontent.com/92355208/162105107-8c0b301d-45a1-47e0-92c2-531716f39237.png)
 
+# 기술 스택
+
+#### 프론트엔드 : React, JavaScript, HTML/CSS
+
+#### 백엔드 : Java, SpringBoot, MariaDB, Gradle
+
+#### 배포 : AWS
+
+#### 협업툴 : Notion
+
+
 
 # 시연 영상
 
@@ -32,4 +43,9 @@ https://user-images.githubusercontent.com/92355208/162109867-bd25c895-a635-4845-
 
 
 https://user-images.githubusercontent.com/92355208/162110163-f0c896b5-f06b-4e43-97e6-685464b2a77f.mov
+
+
+---------------------
+노션
+[click](https://www.notion.so/289423afa96043ee89ed453b8db0755c)
 
