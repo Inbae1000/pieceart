@@ -17,7 +17,7 @@
 
 #### 협업툴 : Notion
 
-
+##### Version : Java(11), MariaDB(10.7.3), SpringBoot(2.6.4)
 
 # 시연 영상
 
